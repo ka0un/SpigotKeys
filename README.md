@@ -139,4 +139,5 @@ public class MenuLIstner implements Listener {
     }
 }
 ```
+you can add clicking functionality and disable item dragging from this
 
