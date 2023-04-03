@@ -1,13 +1,13 @@
 Registering Commands In OnEnabled 
 ---------------------------------
 getCommand("fart").setExecutor(new FartCommand());
----------------------------------
+
 
 
 Registering Listner In OnEnabled 
 --------------------------------
 getServer().getPluginManager().registerEvents(new SpawnListner(this), this);
---------------------------------
+
 
 
 Registering Commands in Plugin.yml
@@ -16,7 +16,7 @@ commands:
   fart:
     description: Fart bby
     usage: /<command> <player>
-----------------------------------
+
 
 
 Register the config.yml In OnEnabled
@@ -49,7 +49,7 @@ setting the instant of a plugin method is important
 during the plugin lifecycle.you have to put that in
 command.java file inside of CommandExecuter Class's 
 Code Block Before making plublic boolean on Command
---------------------------------
+
 
 
 Example Listner
@@ -58,8 +58,6 @@ Example Listner
     public void onPlayerJoin(PlayerJoinEvent e){
 
     }
-
---------------------------------
 
 
 Example Command
@@ -72,7 +70,7 @@ Example Command
 
 	  } 
     }
---------------------------------
+
 
 
 Example Inventory
@@ -88,7 +86,7 @@ Inventory inventory = Bukkit.createInventory(p, 9, ChatColor.RED + "Potato Time"
         p.openInventory(inventory);
 
 this thing might be inside of command
---------------------------------
+
 
 
 Another Inventory Item Example
@@ -108,7 +106,7 @@ Another Inventory Item Example
         item2meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
         item2.setItemMeta(item2meta);
         inventory.setItem(1, item2);
---------------------------------
+
 
 
 Listner to Inventory Menu
@@ -128,4 +126,4 @@ public class MenuLIstner implements Listener {
         }
     }
 }
-----------------------------------
+
