@@ -58,6 +58,10 @@ during the plugin lifecycle.you have to put that in
 command.java file inside of CommandExecuter Class's 
 Code Block Before making plublic boolean on Command
 
+eg:- you wanna use plugin.getconfig() inside of your
+command class so then you have to refernce the plugin
+first by creating this
+
 Example Listner
 --------------------------------
 ```
