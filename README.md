@@ -141,3 +141,34 @@ public class MenuLIstner implements Listener {
 ```
 you can add clicking functionality and disable item dragging from this
 
+
+
+Command CoolDown Example
+--------------------------------
+```
+    @Override
+    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        if (sender instanceof Player){
+            Player player = (Player) sender;
+            if (!this.cooldown.containsKey(player.getUniqueId())){
+                this.cooldown.put(player.getUniqueId(), System.currentTimeMillis());
+
+                player.sendMessage("You Farted");
+            }else{
+                long timeElapsed = System.currentTimeMillis() - cooldown.get(player.getUniqueId());
+
+                //10 sec
+                if (timeElapsed >= 10000){
+                    player.sendMessage("you Farted");
+                    this.cooldown.put(player.getUniqueId(), System.currentTimeMillis());
+                }else{
+                    player.sendMessage("You cant fart again another " + ((10000 - timeElapsed)/1000) + "secounds" );
+                }
+            }
+        }
+        return true;
+    }
+}
+```
+
+
