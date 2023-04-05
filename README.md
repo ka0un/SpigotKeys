@@ -150,6 +150,13 @@ you can add clicking functionality and disable item dragging from this
 Command CoolDown Example
 --------------------------------
 ```
+    private final HashMap<UUID, Long> cooldown;
+
+    public FartCommand() {
+        this.cooldown = new HashMap<>();
+    }
+
+
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player){
