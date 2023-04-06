@@ -182,4 +182,21 @@ Command CoolDown Example
 }
 ```
 
+Switch Case Example for Complex Menu listner
+------------------------------------------
+
+```
+        if (e.getView().getTitle().equalsIgnoreCase(MAINMENU)){
+            if (e.getCurrentItem().getType() != null){
+                switch (e.getCurrentItem().getType()) {
+                    case ARMOR_STAND:
+                        player.closeInventory();
+                        plugin.openCreateMneu(player);
+                        break;
+                    case BARRIER:
+                        player.closeInventory();
+                        break;
+                }
+            }	    
+```
 
